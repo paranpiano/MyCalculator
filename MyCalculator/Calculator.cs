@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace MyCalculator
 {
@@ -12,5 +9,31 @@ namespace MyCalculator
         {
             return first + second;
         }
+
+        public int Devide(int dividend, int divisor)
+        {
+            return dividend / divisor;
+        }
+
+        public int Test(int dividend, int divisor)
+        {
+            var calcuator = new Calculator();
+
+            int result = 0;
+            try
+            {
+                result = calcuator.Devide(dividend, divisor);
+            }
+            catch (DivideByZeroException)
+            {
+                result = int.MaxValue;
+            }
+            catch (Exception )
+            {
+                result = int.MinValue;
+            }
+            return result;
+        }
+
     }
 }
