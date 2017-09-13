@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace MyCalculator
 {
-    public class Class1
+    public class Calculator
     {
+        public int Add(int first, int second)
+        {
+            return first + second;
+        }
     }
 }
