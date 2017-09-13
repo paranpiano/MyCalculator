@@ -8,6 +8,9 @@ namespace MyCalculator.Tests
     public class CalculatorTests
     {
         [TestMethod]
+        [TestCategory("SimpleMath")]
+        //[Ignore]
+        [Priority(0)]
         public void AddSimple()
         {
             //arrange
@@ -19,6 +22,8 @@ namespace MyCalculator.Tests
         }
 
         [TestMethod]
+        [TestCategory("SimpleMath")]
+        [Priority(0)]
         public void DivideSimple()
         {
             //arrange
@@ -30,7 +35,9 @@ namespace MyCalculator.Tests
         }
 
         [TestMethod]
+        [TestCategory("Exception")]
         [ExpectedException(typeof(DivideByZeroException))]
+        [Priority(1)]
         public void DivideByZero()
         {
             //arrange
